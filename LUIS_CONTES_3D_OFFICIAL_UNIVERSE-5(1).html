@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUIS CONTES — Official Universe</title>
+<meta name="description" content="LUIS CONTES — Official Music Universe">
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+:root{--gold:#e9c46a;--gold2:#fff2b5;--ink:#050507;--muted:#a8a8b2;--glass:rgba(255,255,255,.065)}
+body{margin:0;background:#030305;color:#fff;font-family:Inter,system-ui,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:-30%;z-index:-3;background:conic-gradient(from 0deg,transparent,#8d6b1f22,transparent 20%,#6855ff18,transparent 45%);animation:spin 22s linear infinite}
+body:after{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background:radial-gradient(circle at 50% 20%,#e9c46a10,transparent 28%),linear-gradient(115deg,#000,transparent 45%,#000)}
+@keyframes spin{to{transform:rotate(360deg)}} @keyframes float{50%{transform:translateY(-14px)}} @keyframes pulse{50%{box-shadow:0 0 70px #e9c46a33}}
+.wrap{width:min(1240px,92%);margin:auto}.nav{position:fixed;z-index:30;top:18px;left:50%;transform:translateX(-50%);width:min(1160px,92%);display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border:1px solid #ffffff18;border-radius:22px;background:#08080bbd;backdrop-filter:blur(18px);box-shadow:0 20px 80px #0009}
+.brand{font-weight:1000;letter-spacing:.13em}.brand i{font-style:normal;color:var(--gold)}.navlinks{display:flex;gap:20px}.nav a{color:#ddd;text-decoration:none;font-size:12px;font-weight:800}
+.hero{min-height:100vh;display:grid;place-items:center;padding-top:100px;position:relative}.hero-inner{text-align:center}.eyebrow{letter-spacing:.45em;color:var(--gold);font-size:11px;font-weight:900}
+h1{font-size:clamp(65px,13vw,170px);line-height:.78;letter-spacing:-.075em;margin:25px 0;background:linear-gradient(#fff,var(--gold2) 48%,#92702c);-webkit-background-clip:text;color:transparent;text-shadow:0 0 90px #e9c46a1f}
+.hero-copy{max-width:650px;margin:auto;color:#bfc0c9;font-size:18px;line-height:1.7}.buttons{margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.btn{padding:15px 24px;border-radius:999px;text-decoration:none;font-weight:900;color:#050507;background:linear-gradient(135deg,#fff5c8,var(--gold));box-shadow:0 15px 50px #e9c46a22}.btn.secondary{color:#fff;background:#ffffff09;border:1px solid #ffffff18}
+section{padding:90px 0}.title{font-size:42px;margin:0 0 8px}.sub{color:var(--muted);margin:0 0 30px}
+.profile{display:grid;grid-template-columns:1fr 1.35fr;gap:26px;align-items:stretch}
+.cover{min-height:560px;border-radius:34px;border:1px solid #ffffff18;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 40%,#e9c46a25,transparent 25%),linear-gradient(145deg,#17120a,#060608 55%,#11101b);box-shadow:0 30px 100px #000;animation:pulse 5s ease-in-out infinite}
+.cover:before{content:"LUIS CONTES";position:absolute;inset:8%;display:grid;place-items:center;font-size:clamp(42px,7vw,90px);font-weight:1000;letter-spacing:-.08em;transform:rotate(-8deg);color:#ffffff08;text-shadow:0 0 40px #e9c46a}
+.cover .cover-label{position:absolute;bottom:28px;left:28px;right:28px;display:flex;justify-content:space-between;align-items:end}.cover small{color:var(--gold);letter-spacing:.25em}.cover strong{font-size:25px}
+.bio{border:1px solid #ffffff18;background:linear-gradient(145deg,#ffffff0b,#ffffff02);border-radius:34px;padding:34px;box-shadow:0 30px 100px #0006}.bio h3{font-size:32px;margin:0 0 12px}.bio p{color:#b7b7c0;line-height:1.8}.chips{display:flex;gap:9px;flex-wrap:wrap;margin-top:22px}.chip{padding:9px 13px;border-radius:999px;background:#ffffff08;border:1px solid #ffffff14;color:#ddd;font-size:12px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{position:relative;padding:25px;border-radius:28px;border:1px solid #ffffff15;background:linear-gradient(145deg,#ffffff09,#ffffff02);box-shadow:0 25px 80px #0007;transition:.35s;transform-style:preserve-3d}.card:hover{transform:translateY(-9px) rotateX(4deg) rotateY(-4deg);border-color:#e9c46a55}.icon{width:65px;height:65px;border-radius:19px;display:grid;place-items:center;font-size:27px;margin-bottom:22px;background:linear-gradient(145deg,#fff3b8,#a87721);color:#080806;box-shadow:inset 2px 2px 7px #fff8,0 15px 35px #e9c46a22;transform:translateZ(20px)}.card h3{margin:0 0 7px;font-size:20px}.card p{color:var(--muted);line-height:1.5}.card a{display:inline-block;margin-top:12px;color:var(--gold2);text-decoration:none;font-weight:900}
+.release-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.release{display:flex;align-items:center;gap:17px;padding:20px;border:1px solid #ffffff12;border-radius:23px;background:#ffffff05}.disc{width:64px;height:64px;flex:0 0 auto;border-radius:18px;background:conic-gradient(#fff2ad,#8c6824,#20190a,#fff2ad);box-shadow:0 0 35px #e9c46a22;animation:spin 9s linear infinite}.release h4{margin:0 0 5px}.release span{color:#91919b;font-size:12px}
+.socials{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.social{padding:25px;border-radius:25px;text-decoration:none;color:#fff;border:1px solid #ffffff15;background:#ffffff06;transition:.3s}.social:hover{transform:translateY(-6px) scale(1.02);background:#ffffff0b}.social .sicon{font-size:31px;margin-bottom:17px}.social b{display:block}.social small{color:#888;display:block;margin-top:5px}
+footer{padding:65px 0;text-align:center;color:#777;border-top:1px solid #ffffff10}.gold{color:var(--gold)}
+.note{font-size:12px;color:#777;line-height:1.6;margin-top:25px}
+@media(max-width:850px){.profile{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.socials{grid-template-columns:1fr 1fr}.navlinks{display:none}}
+@media(max-width:560px){.grid,.release-grid,.socials{grid-template-columns:1fr}.cover{min-height:430px}.bio{padding:25px}}
+</style>
+<style> .video-shell{position:relative;display:flex;align-items:center;gap:10px}.video-track{display:flex;gap:18px;overflow:hidden;scroll-behavior:smooth;width:100%;padding:12px 2px 25px}.video-card{min-width:330px;text-decoration:none;color:#fff;border:1px solid #ffffff15;border-radius:28px;background:linear-gradient(145deg,#ffffff0b,#ffffff02);padding:12px;box-shadow:0 25px 70px #0008;transition:.35s}.video-card:hover{transform:translateY(-8px) rotateX(3deg);border-color:#e9c46a55}.thumb{height:190px;border-radius:21px;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 40%,#e9c46a55,transparent 24%),linear-gradient(135deg,#16110a,#050507 60%,#151124);display:grid;place-items:center;box-shadow:inset 0 0 70px #000}.thumb:after{content:"LUIS CONTES";position:absolute;font-size:40px;font-weight:1000;letter-spacing:-.08em;color:#ffffff0b;transform:rotate(-8deg)}.thumb.music{background:radial-gradient(circle at 30% 30%,#725cff55,transparent 25%),linear-gradient(135deg,#090712,#17111f)}.thumb.jaque{background:radial-gradient(circle at 65% 35%,#fff0a055,transparent 20%),linear-gradient(135deg,#201708,#060606)}.thumb.shorts{background:radial-gradient(circle at 50% 25%,#e9c46a44,transparent 20%),linear-gradient(135deg,#17070a,#080507)}.thumb.bad{background:radial-gradient(circle at 35% 35%,#9d243b55,transparent 25%),linear-gradient(135deg,#16070a,#060506)}.play{position:relative;z-index:2;width:68px;height:68px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#fff5c8,var(--gold));color:#050507;box-shadow:0 0 45px #e9c46a66;font-size:24px}.tag{position:absolute;top:14px;left:14px;z-index:3;padding:7px 10px;border-radius:999px;background:#050507bb;border:1px solid #ffffff20;color:var(--gold2);font-size:10px;font-weight:900;letter-spacing:.12em}.video-card h3{margin:17px 8px 5px}.video-card p{margin:0 8px 9px;color:#90909a;font-size:13px}.vbtn{width:50px;height:50px;flex:0 0 auto;border-radius:50%;border:1px solid #ffffff20;background:#ffffff0a;color:#fff;font-size:34px;cursor:pointer;backdrop-filter:blur(12px);z-index:2}.vbtn:hover{background:#e9c46a;color:#050507}@media(max-width:560px){.video-card{min-width:82vw}.thumb{height:180px}}</style>
+
+<style>
+#video-universe{position:relative}
+.video-stage{display:flex;align-items:center;gap:14px}
+.video-track{display:flex;gap:18px;overflow:hidden;scroll-behavior:smooth;flex:1;padding:12px 4px 28px}
+.video-card{min-width:310px;flex:0 0 310px;border:1px solid #ffffff16;border-radius:28px;background:linear-gradient(145deg,#ffffff0b,#ffffff02);overflow:hidden;box-shadow:0 28px 70px #0008;transition:.35s;transform-style:preserve-3d}
+.video-card:hover{transform:translateY(-8px) rotateX(3deg) rotateY(-3deg);border-color:#e9c46a66}
+.video-art{height:210px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#07070a}
+.video-art:before{content:"";position:absolute;width:220px;height:220px;border-radius:50%;border:1px solid #e9c46a55;box-shadow:0 0 80px #e9c46a24;animation:spin 10s linear infinite}
+.video-art:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,#e9c46a22,transparent 45%,#0008)}
+.video-art.youtube{background:radial-gradient(circle at 50% 45%,#e9c46a26,#08070a 58%),linear-gradient(135deg,#21170a,#050507)}
+.video-art.shorts{background:radial-gradient(circle at 50% 45%,#fff2b522,#08070a 58%),linear-gradient(135deg,#190d21,#050507)}
+.video-art.tiktok{background:radial-gradient(circle at 50% 45%,#e9c46a20,#08070a 58%),linear-gradient(135deg,#061315,#050507)}
+.platform-orb{position:relative;z-index:3;width:82px;height:82px;border-radius:25px;display:grid;place-items:center;font-size:38px;font-weight:1000;color:#080806;background:linear-gradient(145deg,#fff5c5,#a87823);box-shadow:inset 2px 2px 8px #fff9,0 18px 45px #e9c46a35;animation:float 4s ease-in-out infinite}
+.tag{position:absolute;z-index:4;left:18px;top:16px;font-size:9px;letter-spacing:.2em;font-weight:1000;color:#070707;background:var(--gold);padding:7px 10px;border-radius:999px}
+.video-art strong{position:absolute;z-index:4;bottom:18px;left:20px;font-size:20px;letter-spacing:.04em}
+.video-info{padding:20px}.video-info h3{margin:0 0 7px}.video-info p{margin:0;color:#999;min-height:40px;font-size:13px;line-height:1.5}.video-info a{display:inline-block;margin-top:14px;color:var(--gold2);font-size:12px;font-weight:900;text-decoration:none}
+.vbtn{width:52px;height:52px;flex:0 0 auto;border-radius:50%;border:1px solid #ffffff20;background:#ffffff09;color:#fff;font-size:36px;line-height:1;cursor:pointer;box-shadow:0 12px 35px #0008}.vbtn:hover{background:#e9c46a;color:#050507}
+.dots{text-align:center}.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#555;margin:4px}.dot.active{background:var(--gold);box-shadow:0 0 14px #e9c46a}
+@media(max-width:600px){.video-card{min-width:82vw;flex-basis:82vw}.vbtn{width:42px;height:42px;font-size:28px}.video-track{gap:12px}}
+</style>
+
+<style>
+.platform-video-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.video-platform{min-height:155px;display:flex;align-items:center;gap:22px;padding:24px;border-radius:30px;border:1px solid #ffffff16;background:linear-gradient(145deg,#ffffff0a,#ffffff02);color:#fff;text-decoration:none;box-shadow:0 25px 70px #0008;position:relative;overflow:hidden;transition:.35s;transform-style:preserve-3d}
+.video-platform:before{content:"";position:absolute;width:190px;height:190px;border-radius:50%;right:-70px;top:-90px;border:1px solid #e9c46a33;box-shadow:0 0 70px #e9c46a18;animation:spin 12s linear infinite}
+.video-platform:hover{transform:translateY(-8px) perspective(800px) rotateX(3deg) rotateY(-3deg);border-color:#e9c46a66;box-shadow:0 30px 90px #000,0 0 45px #e9c46a12}
+.vp-icon{position:relative;z-index:2;flex:0 0 auto;width:82px;height:82px;border-radius:25px;display:grid;place-items:center;font-size:38px;font-weight:1000;color:#070707;background:linear-gradient(145deg,#fff4bf,#a87823);box-shadow:inset 2px 2px 9px #fff9,0 18px 45px #e9c46a30;animation:float 4s ease-in-out infinite}
+.video-platform small{position:relative;z-index:2;color:var(--gold);font-size:9px;font-weight:1000;letter-spacing:.24em}
+.video-platform h3{position:relative;z-index:2;margin:7px 0 5px;font-size:20px}
+.video-platform p{position:relative;z-index:2;margin:0;color:#999;font-size:13px}
+.youtube-main .vp-icon,.youtube-shorts .vp-icon{background:linear-gradient(145deg,#fff5c8,#b18129)}
+.tiktok-main .vp-icon,.tiktok-jm .vp-icon,.tiktok-bmt .vp-icon{background:linear-gradient(145deg,#fff1b0,#927027)}
+@media(max-width:650px){.platform-video-grid{grid-template-columns:1fr}.video-platform{min-height:135px}.vp-icon{width:70px;height:70px}}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="brand">LUIS <i>CONTES</i></div><div class="navlinks"><a href="#perfil">PERFIL</a><a href="#music">MÚSICA</a><a href="#releases">LANZAMIENTOS</a><a href="#socials">REDES</a></div></nav>
+
+<header class="hero"><div class="hero-inner"><div class="eyebrow">OFFICIAL MUSIC UNIVERSE</div><h1>LUIS<br>CONTES</h1><p class="hero-copy">Música, identidad y una experiencia digital diseñada para sentirse como una portada de álbum viva.</p><div class="buttons"><a class="btn" href="#music">ENTRAR AL UNIVERSO</a><a class="btn secondary" href="#socials">CONECTAR</a></div></div></header>
+
+<main class="wrap">
+<section id="perfil"><h2 class="title">Portada & Perfil</h2><p class="sub">Tu espacio principal de artista.</p><div class="profile">
+<div class="cover"><div class="cover-label"><div><small>ARTIST</small><br><strong>LUIS CONTES</strong></div><div class="gold">✦ 2026</div></div></div>
+<div class="bio"><h3>LUIS CONTES</h3><p>Artista independiente con una identidad que cruza hip-hop, sonidos urbanos, reggae, dancehall, afrobeat, pop y música latina. Este hub reúne el catálogo musical y las plataformas donde aparece LUIS CONTES.</p><p>La experiencia está pensada como una tarjeta digital premium: portada, perfil, catálogo, streaming y redes en un solo lugar.</p><div class="chips"><span class="chip">HIP-HOP</span><span class="chip">LATIN</span><span class="chip">REGGAE</span><span class="chip">DANCEHALL</span><span class="chip">AFROBEAT</span><span class="chip">POP</span></div></div></div></section>
+
+<section id="music"><h2 class="title">Streaming 3D</h2><p class="sub">Plataformas encontradas públicamente para LUIS CONTES.</p><div class="grid">
+<div class="card"><div class="icon">♫</div><h3>Spotify</h3><p>Perfil de artista.</p><a href="https://open.spotify.com/artist/2OC16322UCPWCVgGbV3Y3c" target="_blank">ESCUCHAR ↗</a></div>
+<div class="card"><div class="icon">●</div><h3>Apple Music</h3><p>Bad Man Thing y más catálogo.</p><a href="https://music.apple.com/us/album/bad-man-thing-single/1827279532" target="_blank">ESCUCHAR ↗</a></div>
+<div class="card"><div class="icon">A</div><h3>Amazon Music</h3><p>Catálogo y lanzamientos.</p><a href="https://music.amazon.in/artists/B0DVH54MQB/luis-contes" target="_blank">ESCUCHAR ↗</a></div>
+<div class="card"><div class="icon">◉</div><h3>Audiomack</h3><p>@luis-contes · JAQUE MATE.</p><a href="https://audiomack.com/luis-contes" target="_blank">ESCUCHAR ↗</a></div>
+<div class="card"><div class="icon">▶</div><h3>YouTube Music</h3><p>Acceso por búsqueda de artista.</p><a href="https://music.youtube.com/search?q=Luis%20Contes" target="_blank">ABRIR ↗</a></div>
+<div class="card"><div class="icon">D</div><h3>Deezer</h3><p>Búsqueda del artista.</p><a href="https://www.deezer.com/search/Luis%20Contes" target="_blank">ABRIR ↗</a></div>
+<div class="card"><div class="icon">T</div><h3>TIDAL</h3><p>Búsqueda del artista.</p><a href="https://tidal.com/search?q=Luis%20Contes" target="_blank">ABRIR ↗</a></div>
+<div class="card"><div class="icon">∞</div><h3>Más plataformas</h3><p>Zona preparada para sumar nuevos servicios verificados.</p><a href="#releases">VER CATÁLOGO ↓</a></div>
+</div></section>
+
+<section id="videos"><h2 class="title">YouTube · Videos & Shorts</h2><p class="sub">Tu contenido visual en un carrusel cinematográfico.</p><div class="video-shell"><button class="vbtn prev" onclick="moveVideos(-1)">‹</button><div class="video-track" id="videoTrack"><a class="video-card" href="https://www.youtube.com/results?search_query=Luis+Contes" target="_blank"><div class="thumb yt"><span class="play">▶</span><span class="tag">VIDEO</span></div><h3>LUIS CONTES</h3><p>Ver videos del artista en YouTube</p></a><a class="video-card" href="https://www.youtube.com/results?search_query=Luis+Contes+music" target="_blank"><div class="thumb music"><span class="play">▶</span><span class="tag">MUSIC</span></div><h3>Music Videos</h3><p>Videos musicales de LUIS CONTES</p></a><a class="video-card" href="https://www.youtube.com/results?search_query=Luis+Contes+Jaque+Mate" target="_blank"><div class="thumb jaque"><span class="play">▶</span><span class="tag">JAQUE MATE</span></div><h3>JAQUE MATE</h3><p>Contenido relacionado al EP</p></a><a class="video-card" href="https://www.youtube.com/results?search_query=Luis+Contes+Shorts" target="_blank"><div class="thumb shorts"><span class="play">▶</span><span class="tag">SHORTS</span></div><h3>Shorts</h3><p>Shorts de LUIS CONTES</p></a><a class="video-card" href="https://www.youtube.com/results?search_query=Luis+Contes+Bad+Man+Thing" target="_blank"><div class="thumb bad"><span class="play">▶</span><span class="tag">BAD MAN THING</span></div><h3>Bad Man Thing</h3><p>Buscar contenido oficial</p></a></div><button class="vbtn next" onclick="moveVideos(1)">›</button></div><p class="note">No encontré un canal de YouTube oficial verificable ni IDs individuales de videos/Shorts en resultados públicos. Por eso el carrusel apunta a búsquedas específicas y no inventa videos ni enlaces.</p></section>
+<section id="video-universe">
+<h2 class="title">Video Universe</h2>
+<p class="sub">Entra a cada plataforma desde su icono.</p>
+
+<div class="platform-video-grid">
+  <a class="video-platform youtube-main" href="https://www.youtube.com/results?search_query=Luis+Contes" target="_blank">
+    <div class="vp-icon">▶</div><div><small>YOUTUBE</small><h3>Videos de LUIS CONTES</h3><p>Todos los videos →</p></div>
+  </a>
+
+  <a class="video-platform youtube-shorts" href="https://www.youtube.com/results?search_query=Luis+Contes+Shorts" target="_blank">
+    <div class="vp-icon">▶</div><div><small>YOUTUBE</small><h3>Shorts de LUIS CONTES</h3><p>Shorts →</p></div>
+  </a>
+
+  <a class="video-platform tiktok-main" href="https://www.tiktok.com/search?q=Luis%20Contes" target="_blank">
+    <div class="vp-icon">♪</div><div><small>TIKTOK</small><h3>Shorts de LUIS CONTES</h3><p>Contenido vertical →</p></div>
+  </a>
+
+  <a class="video-platform tiktok-jm" href="https://www.tiktok.com/search?q=Luis%20Contes%20Jaque%20Mate" target="_blank">
+    <div class="vp-icon">♪</div><div><small>TIKTOK</small><h3>JAQUE MATE</h3><p>Clips y Shorts →</p></div>
+  </a>
+
+  <a class="video-platform tiktok-bmt" href="https://www.tiktok.com/search?q=Luis%20Contes%20Bad%20Man%20Thing" target="_blank">
+    <div class="vp-icon">♪</div><div><small>TIKTOK</small><h3>BAD MAN THING</h3><p>Clips y Shorts →</p></div>
+  </a>
+</div>
+
+<p class="note">Cada icono abre directamente el contenido correspondiente de LUIS CONTES en su plataforma. No se inventaron URLs individuales de videos que no pudieron verificarse públicamente.</p>
+</section>
+
+<section id="releases"><h2 class="title">Catálogo</h2><p class="sub">Lanzamientos identificados públicamente.</p><div class="release-grid">
+<div class="release"><div class="disc"></div><div><h4>JAQUE MATE</h4><span>EP · 5 canciones · 2025</span></div></div>
+<div class="release"><div class="disc"></div><div><h4>Bad Man Thing</h4><span>Single · 02:10 · 2025</span></div></div>
+<div class="release"><div class="disc"></div><div><h4>Perdí Todo</h4><span>feat. Melen · 03:23</span></div></div>
+<div class="release"><div class="disc"></div><div><h4>Gracias</h4><span>03:20 · JAQUE MATE</span></div></div>
+<div class="release"><div class="disc"></div><div><h4>Material</h4><span>03:23 · JAQUE MATE</span></div></div>
+<div class="release"><div class="disc"></div><div><h4>La Noche</h4><span>03:09 · JAQUE MATE</span></div></div>
+<div class="release"><div class="disc"></div><div><h4>Sin Miedo</h4><span>02:25 · JAQUE MATE</span></div></div>
+<div class="release"><div class="disc"></div><div><h4>Millo X Ley</h4><span>Luis Contes & Melen · 03:25</span></div></div>
+</div><p class="note">JAQUE MATE aparece públicamente como un EP de cinco canciones; Amazon Music identifica Perdí Todo, Gracias, Material, La Noche y Sin Miedo. Apple Music identifica Bad Man Thing como single de 2025. citeturn0search10turn0search3</p></section>
+
+<section id="socials"><h2 class="title">Redes Sociales</h2><p class="sub">Panel preparado para tus perfiles oficiales.</p><div class="socials">
+<a class="social" href="https://www.instagram.com/explore/search/keyword/?q=Luis%20Contes" target="_blank"><div class="sicon">◎</div><b>Instagram</b><small>Buscar LUIS CONTES</small></a>
+<a class="social" href="https://www.facebook.com/search/top?q=Luis%20Contes" target="_blank"><div class="sicon">f</div><b>Facebook</b><small>Buscar LUIS CONTES</small></a>
+<a class="social" href="https://www.youtube.com/results?search_query=Luis+Contes" target="_blank"><div class="sicon">▶</div><b>YouTube</b><small>Buscar LUIS CONTES</small></a>
+<a class="social" href="https://www.tiktok.com/search?q=Luis%20Contes" target="_blank"><div class="sicon">♪</div><b>TikTok</b><small>Buscar LUIS CONTES</small></a>
+</div><p class="note">Los perfiles sociales directos no se han inventado: están configurados como búsqueda hasta poder verificar los @ oficiales.</p></section>
+</main>
+<footer><strong>LUIS <span class="gold">CONTES</span></strong><br><br>OFFICIAL MUSIC UNIVERSE · © 2026</footer>
+
+<script>
+document.querySelectorAll('.card').forEach(c=>{
+ c.addEventListener('mousemove',e=>{
+  const r=c.getBoundingClientRect(), x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+  c.style.transform=`perspective(900px) rotateY(${x*7}deg) rotateX(${-y*7}deg) translateY(-7px)`;
+ });
+ c.addEventListener('mouseleave',()=>c.style.transform='');
+});
+</script>
+<script>let videoPos=0;function moveVideos(dir){const t=document.getElementById('videoTrack');const card=t.querySelector('.video-card');if(!card)return;videoPos+=dir;const max=t.children.length-1;videoPos=Math.max(0,Math.min(videoPos,max));t.scrollTo({left:videoPos*(card.offsetWidth+18),behavior:'smooth'});}</script>
+
+<script>
+let videoIndex=0;
+const videoTrack=document.getElementById('videoTrack');
+const videoCards=document.querySelectorAll('.video-card');
+const dots=document.getElementById('videoDots');
+videoCards.forEach((_,i)=>{const d=document.createElement('span');d.className='dot'+(i===0?' active':'');dots.appendChild(d)});
+function slideVideos(dir){
+  const step=videoCards[0].getBoundingClientRect().width+18;
+  videoIndex=Math.max(0,Math.min(videoCards.length-1,videoIndex+dir));
+  videoTrack.scrollTo({left:videoIndex*step,behavior:'smooth'});
+  [...dots.children].forEach((d,i)=>d.classList.toggle('active',i===videoIndex));
+}
+setInterval(()=>{if(videoCards.length){slideVideos(videoIndex>=videoCards.length-1?-videoCards.length+1:1)}},6500);
+</script>
+</body>
+</html>
